@@ -39,7 +39,7 @@ class Gui:
         utilities_wind_label = Label(master, text="Wind ")
         utilities_coal_label = Label(master,text = "Coal")
         utilities_nuke_label = Label(master,text = "Nuclear")
-        utilities_water_label = Label(master,text = "Water")
+        
         #Real Estate
         estate_label = Label(master,text="Real Estate")
         estate_residential_label = Label(master,text="Residential")
@@ -49,9 +49,14 @@ class Gui:
         bonds_gov_label = Label(master,text = "Government")
         bonds_state_label = Label(master,text = "State")
 
-        list_labels = [tech_label,tech_cellular_label,tech_biomedical_label,tech_computers_label,cosmetics_label,cosmetics_essential_oils_label,cosmetics_synth_colors_label,cosmetics_makeup_label,metals_label,metals_gold_label,metals_silver_label,metals_titanium_label,metals_platinum_label,metals_copper_label,metals_bronze_label,trans_label,trans_auto_label,trans_aerospace_label,trans_railroad_label,utilities_label,utilities_waste_recycling_label,utilities_solar_label,utilities_wind_label,utilities_coal_label,utilities_nuke_label,utilities_water_label,estate_label,estate_residential_label,estate_commercial_label,bonds_label,bonds_gov_label,bonds_state_label]
+        list_labels = [tech_label,tech_cellular_label,tech_biomedical_label,tech_computers_label,cosmetics_label,cosmetics_essential_oils_label,cosmetics_synth_colors_label,cosmetics_makeup_label,metals_label,metals_gold_label,metals_silver_label,metals_titanium_label,metals_platinum_label,metals_copper_label,metals_bronze_label,trans_label,trans_auto_label,trans_aerospace_label,trans_railroad_label,utilities_label,utilities_waste_recycling_label,utilities_solar_label,utilities_wind_label,utilities_coal_label,utilities_nuke_label,estate_label,estate_residential_label,estate_commercial_label,bonds_label,bonds_gov_label,bonds_state_label]
         for i in range(len(list_labels)):
             list_labels[i].grid(row=i,column=0)
+        
+        #!TextVars
+        
+
+
 
 root = Tk()
 gui = Gui(root)
