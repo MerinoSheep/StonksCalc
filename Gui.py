@@ -36,7 +36,7 @@ class Gui:
         utilities_label = Label(master, text="Utilities") # Header
         utilities_waste_recycling_label = Label(master, text="Waste and Recycling")
         utilities_solar_label = Label(master, text="Solar ")
-        utilities_wind_label = Label(master, text="Wind ")
+        utilities_wind_label = Label(master, text="Wind")
         utilities_coal_label = Label(master,text = "Coal")
         utilities_nuke_label = Label(master,text = "Nuclear")
         
@@ -49,12 +49,45 @@ class Gui:
         bonds_gov_label = Label(master,text = "Government")
         bonds_state_label = Label(master,text = "State")
 
+
+
+        
+
         list_labels = [tech_label,tech_cellular_label,tech_biomedical_label,tech_computers_label,cosmetics_label,cosmetics_essential_oils_label,cosmetics_synth_colors_label,cosmetics_makeup_label,metals_label,metals_gold_label,metals_silver_label,metals_titanium_label,metals_platinum_label,metals_copper_label,metals_bronze_label,trans_label,trans_auto_label,trans_aerospace_label,trans_railroad_label,utilities_label,utilities_waste_recycling_label,utilities_solar_label,utilities_wind_label,utilities_coal_label,utilities_nuke_label,estate_label,estate_residential_label,estate_commercial_label,bonds_label,bonds_gov_label,bonds_state_label]
         for i in range(len(list_labels)):
             list_labels[i].grid(row=i,column=0)
         
         #!TextVars
+        cellular_var = StringVar()
+        biomedical_var = StringVar()
+        ai_var = StringVar()
+        computer_var = StringVar()
+        essential_oils_var = StringVar()
+        synth_colors_var = StringVar()
+        makeup_var = StringVar()
+        gold_var = StringVar()
+        silver_var = StringVar()
+        titanium_var = StringVar()
+        platinum_var = StringVar()
+        copper_var = StringVar()
+        bronze_var = StringVar()
+        auto_var = StringVar()
+        aerospace_var = StringVar()
+        railroad_var = StringVar()
+        waste_var = StringVar()
+        solar_var = StringVar()
+        wind_var = StringVar()
+        coal_var = StringVar()
+        nuke_var = StringVar()
+        residential_var = StringVar()
+        commerical_var = StringVar()
+        gov_bond_var = StringVar()
+        state_bond_var = StringVar()
         
+
+
+
+
 
 
 

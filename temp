@@ -1,0 +1,43 @@
+        tech_label_price = Label(master, text="")  # Header
+        tech_cellular_label_price = Label(master, textvariable=cellular_var)
+        tech_biomedical_label_price = Label(master, textvariable=biomedical_var)
+        tech_ai_label_price = Label(master, textvariable=ai_var)
+        tech_computers_label_price = Label(master, textvariable=computer_var)
+        # Cosmetics
+        cosmetics_label_price = Label(master, text="") # Header
+        cosmetics_essential_oils_label_price = Label(master, textvariable=essential_oils_var)
+        cosmetics_synth_colors_label_price = Label(master, textvariable=synth_colors_var)
+        cosmetics_makeup_label_price = Label(master, textvariable=makeup_var)
+        # Metals
+        metals_label_price = Label(master, text="Precious Metals") # Header
+        metals_gold_label_price = Label(master, textvariable=gold_var)
+        metals_silver_label_price = Label(master, textvariable=silver_var)
+        metals_titanium_label_price = Label(master, textvariable=titanium_var)
+        metals_platinum_label_price = Label(master, textvariable=platinum_var)
+        metals_copper_label_price = Label(master, textvariable=copper_var)
+        metals_bronze_label_price = Label(master, textvariable=bronze_var)
+        # Transportation
+        trans_label_price = Label(master, text="dddd") # Header
+        trans_auto_label_price = Label(master, textvariable=auto_var)
+        trans_aerospace_label_price = Label(master, textvariable=aerospace_var)
+        trans_railroad_label_price = Label(master, textvariable=railroad_var)
+        # Utilities
+        utilities_label_price = Label(master, text="Utilities") # Header
+        utilities_waste_recycling_label_price = Label(master, textvariable=waste_var)
+        utilities_solar_label_price = Label(master, textvariable=solar_var)
+        utilities_wind_label_price = Label(master, textvariable=wind_var)
+        utilities_coal_label_price = Label(master,textvariable = coal_var)
+        utilities_nuke_label_price = Label(master,textvariable = nuke_var)
+        
+        #Real Estate
+        estate_label_price = Label(master,text="dd")
+        estate_residential_label_price = Label(master,textvariable=residential_var)
+        estate_commercial_label_price = Label(master,textvariable=commerical_var)
+        #Bonds
+        bonds_label_price = Label(master,textvariable="Bonds")
+        bonds_gov_label_price = Label(master,textvariable = gov_bond_var)
+        bonds_state_label_price = Label(master,textvariable = state_bond_var)
+
+        list_label_prices = [tech_label_price,tech_cellular_label_price,tech_biomedical_label_price,tech_computers_label_price,cosmetics_label_price,cosmetics_essential_oils_label_price,cosmetics_synth_colors_label_price,cosmetics_makeup_label_price,metals_label_price,metals_gold_label_price,metals_silver_label_price,metals_titanium_label_price,metals_platinum_label_price,metals_copper_label_price,metals_bronze_label_price,trans_label_price,trans_auto_label_price,trans_aerospace_label_price,trans_railroad_label_price,utilities_label_price,utilities_waste_recycling_label_price,utilities_solar_label_price,utilities_wind_label_price,utilities_coal_label_price,utilities_nuke_label_price,estate_label_price,estate_residential_label_price,estate_commercial_label_price,bonds_label_price,bonds_gov_label_price,bonds_state_label_price]
+        for i in range(len(list_label_prices)):
+            list_label_prices[i].grid(row=i,column=2)
