@@ -1,89 +1,116 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import font
+
+
 class Gui:
-    def __init__(self,master):
+    def __init__(self, master):
         self.master = master
+
         master.title("Stonks")
-        #root.attributes("-fullscreen",True) # Fullscreen
+        # root.attributes("-fullscreen",True) # Fullscreen
         master.geometry(
-        "{0}x{1}+0+0".format(master.winfo_screenwidth(), master.winfo_screenheight()))
+            "{0}x{1}+0+0".format(master.winfo_screenwidth(), master.winfo_screenheight()))
+
+
         # Tech
-        tech_label = Label(master, text="Technology")  # Header
-        tech_cellular_label = Label(master, text="Cellular")
-        tech_biomedical_label = Label(master, text="Biomedical")
-        tech_ai_label = Label(master, text="AI")
-        tech_computers_label = Label(master, text="Computers")
+        self.tech_label = Label(master, text="Technology")  # Header
+        self.tech_cellular_label = Label(master, text="Cellular")
+        self.tech_biomedical_label = Label(master, text="Biomedical")
+        self.tech_ai_label = Label(master, text="AI")
+        self.tech_computers_label = Label(master, text="Computers")
         # Cosmetics
-        cosmetics_label = Label(master, text="Cosmetics") # Header
-        cosmetics_essential_oils_label = Label(master, text="Essential Oils")
-        cosmetics_synth_colors_label = Label(master, text="Synthetic Colors")
-        cosmetics_makeup_label = Label(master, text="Makeup")
+        self.cosmetics_label = Label(master, text="Cosmetics")  # Header
+        self.cosmetics_essential_oils_label = Label(master, text="Essential Oils")
+        self.cosmetics_synth_colors_label = Label(master, text="Synthetic Colors")
+        self.cosmetics_makeup_label = Label(master, text="Makeup")
         # Metals
-        metals_label = Label(master, text="Precious Metals") # Header
-        metals_gold_label = Label(master, text="Gold")
-        metals_silver_label = Label(master, text="Silver")
-        metals_titanium_label = Label(master, text="Titanium")
-        metals_platinum_label = Label(master, text="Platinum")
-        metals_copper_label = Label(master, text="Copper")
-        metals_bronze_label = Label(master, text="Bronze")
+        self.metals_label = Label(master, text="Precious Metals")  # Header
+        self.metals_gold_label = Label(master, text="Gold")
+        self.metals_silver_label = Label(master, text="Silver")
+        self.metals_titanium_label = Label(master, text="Titanium")
+        self.metals_platinum_label = Label(master, text="Platinum")
+        self.metals_copper_label = Label(master, text="Copper")
+        self.metals_bronze_label = Label(master, text="Bronze")
         # Transportation
-        trans_label = Label(master, text="Transportation") # Header
-        trans_auto_label = Label(master, text="Autombile")
-        trans_aerospace_label = Label(master, text="Aerospace")
-        trans_railroad_label = Label(master, text="Railroad")
+        self.trans_label = Label(master, text="Transportation")  # Header
+        self.trans_auto_label = Label(master, text="Autombile")
+        self.trans_aerospace_label = Label(master, text="Aerospace")
+        self.trans_railroad_label = Label(master, text="Railroad")
         # Utilities
-        utilities_label = Label(master, text="Utilities") # Header
-        utilities_waste_recycling_label = Label(master, text="Waste and Recycling")
-        utilities_solar_label = Label(master, text="Solar ")
-        utilities_wind_label = Label(master, text="Wind")
-        utilities_coal_label = Label(master,text = "Coal")
-        utilities_nuke_label = Label(master,text = "Nuclear")
-        
-        #Real Estate
-        estate_label = Label(master,text="Real Estate")
-        estate_residential_label = Label(master,text="Residential")
-        estate_commercial_label = Label(master,text="Commerical")
-        #Bonds
-        bonds_label = Label(master,text="Bonds")
-        bonds_gov_label = Label(master,text = "Government")
-        bonds_state_label = Label(master,text = "State")
+        self.utilities_label = Label(master, text="Utilities")  # Header
+        self.utilities_waste_recycling_label = Label(
+            master, text="Waste and Recycling")
+        self.utilities_solar_label = Label(master, text="Solar ")
+        self.utilities_wind_label = Label(master, text="Wind")
+        self.utilities_coal_label = Label(master, text="Coal")
+        self.utilities_nuke_label = Label(master, text="Nuclear")
 
+        # Real Estate
+        self.estate_label = Label(master, text="Real Estate")
+        self.estate_residential_label = Label(master, text="Residential")
+        self.estate_commercial_label = Label(master, text="Commerical")
+        # Bonds
+        self.bonds_label = Label(master, text="Bonds")
+        self.bonds_gov_label = Label(master, text="Government")
+        self.bonds_state_label = Label(master, text="State")
 
+        self.list_labels = [self.tech_label, self.tech_cellular_label, self.tech_biomedical_label, self.tech_computers_label, self.cosmetics_label, self.cosmetics_essential_oils_label, self.cosmetics_synth_colors_label, self.cosmetics_makeup_label, self.metals_label, self.metals_gold_label, self.metals_silver_label, self.metals_titanium_label, self.metals_platinum_label, self.metals_copper_label, self.metals_bronze_label,
+                       self.trans_label, self.trans_auto_label, self.trans_aerospace_label, self.trans_railroad_label, self.utilities_label, self.utilities_waste_recycling_label, self.utilities_solar_label, self.utilities_wind_label, self.utilities_coal_label, self.utilities_nuke_label, self.estate_label, self.estate_residential_label, self.estate_commercial_label, self.bonds_label, self.bonds_gov_label, self.bonds_state_label]
+        for i in range(len(self.list_labels)):
+            self.list_labels[i].grid(row=i, column=0)
 
-        
-
-        list_labels = [tech_label,tech_cellular_label,tech_biomedical_label,tech_computers_label,cosmetics_label,cosmetics_essential_oils_label,cosmetics_synth_colors_label,cosmetics_makeup_label,metals_label,metals_gold_label,metals_silver_label,metals_titanium_label,metals_platinum_label,metals_copper_label,metals_bronze_label,trans_label,trans_auto_label,trans_aerospace_label,trans_railroad_label,utilities_label,utilities_waste_recycling_label,utilities_solar_label,utilities_wind_label,utilities_coal_label,utilities_nuke_label,estate_label,estate_residential_label,estate_commercial_label,bonds_label,bonds_gov_label,bonds_state_label]
-        for i in range(len(list_labels)):
-            list_labels[i].grid(row=i,column=0)
-        
         #!TextVars
-        cellular_var = StringVar()
-        biomedical_var = StringVar()
-        ai_var = StringVar()
-        computer_var = StringVar()
-        essential_oils_var = StringVar()
-        synth_colors_var = StringVar()
-        makeup_var = StringVar()
-        gold_var = StringVar()
-        silver_var = StringVar()
-        titanium_var = StringVar()
-        platinum_var = StringVar()
-        copper_var = StringVar()
-        bronze_var = StringVar()
-        auto_var = StringVar()
-        aerospace_var = StringVar()
-        railroad_var = StringVar()
-        waste_var = StringVar()
-        solar_var = StringVar()
-        wind_var = StringVar()
-        coal_var = StringVar()
-        nuke_var = StringVar()
-        residential_var = StringVar()
-        commerical_var = StringVar()
-        gov_bond_var = StringVar()
-        state_bond_var = StringVar()
-        
+        self.tech_label_price = Label(master, text="")  # Header
+        self.tech_cellular_label_price = Label(master)
+        self.tech_biomedical_label_price = Label(
+            master )
+        self.tech_ai_label_price = Label(master)
+        self.tech_computers_label_price = Label(master)
+        # Cosmetics
+        self.cosmetics_label_price = Label(master, text="")  # Header
+        self.cosmetics_essential_oils_label_price = Label(
+            master)
+        self.cosmetics_synth_colors_label_price = Label(
+            master)
+        self.cosmetics_makeup_label_price = Label(master)
+        # Metals
+        self.metals_label_price = Label(master, text="Precious Metals")  # Header
+        self.metals_gold_label_price = Label(master)
+        self.metals_silver_label_price = Label(master )
+        self.metals_titanium_label_price = Label(master)
+        self.metals_platinum_label_price = Label(master)
+        self.metals_copper_label_price = Label(master)
+        self.metals_bronze_label_price = Label(master)
+        # Transportation
+        self.trans_label_price = Label(master)  # Header
+        self.trans_auto_label_price = Label(master)
+        self.trans_aerospace_label_price = Label(master)
+        self.trans_railroad_label_price = Label(master)
+        # Utilities
+        self.utilities_label_price = Label(master, text="Utilities")  # Header
+        self.utilities_waste_recycling_label_price = Label(
+            master)
+        self.utilities_solar_label_price = Label(master)
+        self.utilities_wind_label_price = Label(master)
+        self.utilities_coal_label_price = Label(master)
+        self.utilities_nuke_label_price = Label(master, text="")
+
+        # Real Estate
+        self.estate_label_price = Label(master)
+        self.estate_residential_label_price = Label(
+            master)
+        self.estate_commercial_label_price = Label(
+            master)
+        # Bonds
+        self.bonds_label_price = Label(master)
+        self.bonds_gov_label_price = Label(master)
+        self.bonds_state_label_price = Label(master)
+
+        self.list_label_prices = [self.tech_label_price, self.tech_cellular_label_price, self.tech_biomedical_label_price, self.tech_computers_label_price, self.cosmetics_label_price, self.cosmetics_essential_oils_label_price, self.cosmetics_synth_colors_label_price, self.cosmetics_makeup_label_price, self.metals_label_price, self.metals_gold_label_price, self.metals_silver_label_price, self.metals_titanium_label_price, self.metals_platinum_label_price, self.metals_copper_label_price, self.metals_bronze_label_price,
+                             self.trans_label_price, self.trans_auto_label_price, self.trans_aerospace_label_price, self.trans_railroad_label_price, self.utilities_label_price, self.utilities_waste_recycling_label_price, self.utilities_solar_label_price, self.utilities_wind_label_price, self.utilities_coal_label_price, self.utilities_nuke_label_price, self.estate_label_price, self.estate_residential_label_price, self.estate_commercial_label_price, self.bonds_label_price, self.bonds_gov_label_price, self.bonds_state_label_price]
+        for i in range(len(self.list_label_prices)):
+            self.list_label_prices[i].grid(row=i, column=2)
 
 
 
@@ -92,5 +119,8 @@ class Gui:
 
 
 root = Tk()
-gui = Gui(root)
+my_gui = Gui(root)
+my_gui.bonds_gov_label_price['text'] = "MONKEY"
 root.mainloop()
+
+
