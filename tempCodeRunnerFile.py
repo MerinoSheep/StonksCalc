@@ -1,1 +1,1 @@
-self
+import price_update
