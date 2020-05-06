@@ -1,1 +1,1 @@
-import price_update
+utilities_waste_recycling_label_price

@@ -55,7 +55,7 @@ class Gui:
 		self.bonds_gov_label = Label(master, text="Government")
 		self.bonds_state_label = Label(master, text="State")
 
-		self.list_labels = [self.tech_label, self.tech_cellular_label, self.tech_biomedical_label, self.tech_computers_label, self.cosmetics_label, self.cosmetics_essential_oils_label, self.cosmetics_synth_colors_label, self.cosmetics_makeup_label, self.metals_label, self.metals_gold_label, self.metals_silver_label, self.metals_titanium_label, self.metals_platinum_label, self.metals_copper_label, self.metals_bronze_label,
+		self.list_labels = [self.tech_label, self.tech_cellular_label, self.tech_biomedical_label,self.tech_ai_label, self.tech_computers_label, self.cosmetics_label, self.cosmetics_essential_oils_label, self.cosmetics_synth_colors_label, self.cosmetics_makeup_label, self.metals_label, self.metals_gold_label, self.metals_silver_label, self.metals_titanium_label, self.metals_platinum_label, self.metals_copper_label, self.metals_bronze_label,
 					   self.trans_label, self.trans_auto_label, self.trans_aerospace_label, self.trans_railroad_label, self.utilities_label, self.utilities_waste_recycling_label, self.utilities_solar_label, self.utilities_wind_label, self.utilities_coal_label, self.utilities_nuke_label, self.estate_label, self.estate_residential_label, self.estate_commercial_label, self.bonds_label, self.bonds_gov_label, self.bonds_state_label]
 		for i in range(len(self.list_labels)):
 			self.list_labels[i].grid(row=i, column=0)
@@ -63,16 +63,13 @@ class Gui:
 		#!PRICE LABELS
 		self.tech_label_price = Label(master, text="—")  # Header These are placeholders and will not ever change
 		self.tech_cellular_label_price = Label(master)
-		self.tech_biomedical_label_price = Label(
-			master )
+		self.tech_biomedical_label_price = Label(master )
 		self.tech_ai_label_price = Label(master)
 		self.tech_computers_label_price = Label(master)
 		# Cosmetics
 		self.cosmetics_label_price = Label(master, text="—")  # Header
-		self.cosmetics_essential_oils_label_price = Label(
-			master)
-		self.cosmetics_synth_colors_label_price = Label(
-			master)
+		self.cosmetics_essential_oils_label_price = Label(master)
+		self.cosmetics_synth_colors_label_price = Label(master)
 		self.cosmetics_makeup_label_price = Label(master)
 		# Metals
 		self.metals_label_price = Label(master, text="—")  # Header
@@ -107,7 +104,7 @@ class Gui:
 		self.bonds_gov_label_price = Label(master)
 		self.bonds_state_label_price = Label(master)
 
-		self.list_label_prices = [self.tech_label_price, self.tech_cellular_label_price, self.tech_biomedical_label_price, self.tech_computers_label_price, self.cosmetics_label_price, self.cosmetics_essential_oils_label_price, self.cosmetics_synth_colors_label_price, self.cosmetics_makeup_label_price, self.metals_label_price, self.metals_gold_label_price, self.metals_silver_label_price, self.metals_titanium_label_price, self.metals_platinum_label_price, self.metals_copper_label_price, self.metals_bronze_label_price,
+		self.list_label_prices = [self.tech_label_price, self.tech_cellular_label_price, self.tech_biomedical_label_price,self.tech_ai_label_price ,self.tech_computers_label_price, self.cosmetics_label_price, self.cosmetics_essential_oils_label_price, self.cosmetics_synth_colors_label_price, self.cosmetics_makeup_label_price, self.metals_label_price, self.metals_gold_label_price, self.metals_silver_label_price, self.metals_titanium_label_price, self.metals_platinum_label_price, self.metals_copper_label_price, self.metals_bronze_label_price,
 							 self.trans_label_price, self.trans_auto_label_price, self.trans_aerospace_label_price, self.trans_railroad_label_price, self.utilities_label_price, self.utilities_waste_recycling_label_price, self.utilities_solar_label_price, self.utilities_wind_label_price, self.utilities_coal_label_price, self.utilities_nuke_label_price, self.estate_label_price, self.estate_residential_label_price, self.estate_commercial_label_price, self.bonds_label_price, self.bonds_gov_label_price, self.bonds_state_label_price]
 		for i in range(len(self.list_label_prices)):
 			self.list_label_prices[i].grid(row=i, column=2)
@@ -115,18 +112,7 @@ class Gui:
 		#Entry 
 		self.card_entry = Entry(master)
 		self.card_entry.grid(row=999,column=998)
-		self.next_turn_button = Button(master,text="Next Turn",command= lambda: card.num(self.card_entry.get(),self))
+		self.next_turn_button = Button(master,text="Next Turn",command=lambda: card.num(self.card_entry.get(),self))
 		self.next_turn_button.grid(row=999,column=999)
 
-
-
-
-
-"""
-root = Tk()
-my_gui = Gui(root)
-my_gui.bonds_gov_label_price['text'] = "MONKEY"
-root.mainloop()
-
-
-"""
+		
