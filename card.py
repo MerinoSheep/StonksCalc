@@ -1,6 +1,6 @@
 # Reference google doc for documentation
 from math import ceil
-from math import randint
+from random import randint
 complex_dict={}
 def rand20():#random for 1-20
 	return str(randint(1,20))

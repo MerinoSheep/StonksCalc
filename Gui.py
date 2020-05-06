@@ -8,7 +8,7 @@ class Gui:
 		self.master = master
 
 		master.title("Stonks")
-		# root.attributes("-fullscreen",True) # Fullscreen
+		master.attributes("-fullscreen",True) # Fullscreen
 		master.geometry(
 			"{0}x{1}+0+0".format(master.winfo_screenwidth(), master.winfo_screenheight()))
 
