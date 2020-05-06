@@ -126,9 +126,12 @@ class Gui:
 		for i in range(len(self.list_label_prices2)):
 			self.list_label_prices2[i].grid(row=i, column=4)
 		#Entry 
+		def entry_click():
+			card.num(self.card_entry.get(),self)
+			self.card_entry.delete(0,'end')
 		self.card_entry = Entry(master)
 		self.card_entry.grid(row=999,column=998)
-		self.next_turn_button = Button(master,text="Next Turn",command=lambda: card.num(self.card_entry.get(),self))
+		self.next_turn_button = Button(master,text="Next Turn",command=entry_click)
 		self.next_turn_button.grid(row=999,column=999)
 
 		

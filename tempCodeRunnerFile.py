@@ -1,1 +1,1 @@
-utilities_waste_recycling_label_price
+root = tk.Tk()
