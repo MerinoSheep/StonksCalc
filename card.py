@@ -127,7 +127,3 @@ def num(num, gui):
 	complex_dict = {key:val for key, val in complex_dict.items() if val[0] != 0}
 	print(complex_dict)
 
-
-	#complex_dict = complex_dict_temp
-	#print(complex_dict)
-

@@ -2,15 +2,19 @@ from tkinter import *
 import tkinter.ttk
 from tkinter import font
 import card
+import shutdown
 
 class Gui:
+	
 	def __init__(self, master):
+		self.power_button = PhotoImage(file ="img\power_button.png").subsample(6,6)
+
 		self.master = master
 
 		master.title("Stonks")
-		master.attributes("-fullscreen",True) # Fullscreen
-		master.geometry(
-			"{0}x{1}+0+0".format(master.winfo_screenwidth(), master.winfo_screenheight()))
+		#master.attributes("-fullscreen",True) # Fullscreen
+		#master.geometry(
+		#	"{0}x{1}+0+0".format(master.winfo_screenwidth(), master.winfo_screenheight()))
 
 
 		# Tech
@@ -129,9 +133,14 @@ class Gui:
 		def entry_click():
 			card.num(self.card_entry.get(),self)
 			self.card_entry.delete(0,'end')
+
+		self.shutdown_button = Button(master,image=self.power_button,command=shutdown.main) 
+		self.shutdown_button.grid(row=0,column=999)
+
 		self.card_entry = Entry(master)
 		self.card_entry.grid(row=999,column=998)
 		self.next_turn_button = Button(master,text="Next Turn",command=entry_click)
 		self.next_turn_button.grid(row=999,column=999)
+
 
 		
