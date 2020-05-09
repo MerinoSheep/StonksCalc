@@ -7,7 +7,7 @@ import shutdown
 class Gui:
 	
 	def __init__(self, master):
-		self.power_button = PhotoImage(file ="img\power_button.png").subsample(6,6)
+		self.power_button = PhotoImage(file ="img/power_button.png").subsample(6,6)
 
 		self.master = master
 
