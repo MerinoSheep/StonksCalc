@@ -13,8 +13,8 @@ class Gui:
 
 		master.title("Stonks")
 		#master.attributes("-fullscreen",True) # Fullscreen
-		#master.geometry(
-		#	"{0}x{1}+0+0".format(master.winfo_screenwidth(), master.winfo_screenheight()))
+		master.geometry(
+			"{0}x{1}+0+0".format(master.winfo_screenwidth(), master.winfo_screenheight()))
 
 
 		# Tech
